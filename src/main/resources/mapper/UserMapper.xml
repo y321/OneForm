@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace 路径 指向dao层接口-->
+<mapper namespace="com.example.form.dao.UserMapper" >
+
+    <select id="getAllUser" resultType="com.example.form.entity.User">
+        SELECT * FROM user
+    </select>
+    <select id="selectUserByUserName" resultType="com.example.form.entity.User" parameterType="com.example.form.entity.User">
+        SELECT * FROM user WHERE userName = #{userName}
+    </select>
+    <insert id="addUser">
+        INSERT INTO user(wechatNum,userName) VALUES ('111',#{userName})
+    </insert>
+
+
+</mapper>
