@@ -3,18 +3,19 @@ package com.example.form.entity;
 
 public class User {
 
-  private long wechatid;
+  private int wechatid;
   private String wechatNum;
   private String userName;
+  private String passWord;
   private String type;
   private String state;
 
 
-  public long getWechatid() {
+  public int getWechatid() {
     return wechatid;
   }
 
-  public void setWechatid(long wechatid) {
+  public void setWechatid(int wechatid) {
     this.wechatid = wechatid;
   }
 
@@ -54,4 +55,11 @@ public class User {
     this.state = state;
   }
 
+  public String getPassWord() {
+    return passWord;
+  }
+
+  public void setPassWord(String passWord) {
+    this.passWord = passWord;
+  }
 }

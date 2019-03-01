@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace 路径 指向dao层接口-->
+<mapper namespace="com.example.form.dao.FormMapper" >
+
+    <select id="getAllForm" resultType="com.example.form.entity.FormBean">
+        SELECT * FROM form
+    </select>
+    <select id="selectFormByName" resultType="com.example.form.entity.FormBean" parameterType="com.example.form.entity.FormBean">
+        SELECT * FROM form WHERE name = #{name}
+    </select>
+    <insert id="addForm" >
+        INSERT INTO form(name,info,userid) VALUES (#{name},#{info},'1')
+    </insert>
+
+
+</mapper>

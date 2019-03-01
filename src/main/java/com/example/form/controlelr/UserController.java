@@ -5,7 +5,6 @@ import com.example.form.entity.User;
 import com.example.form.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -41,8 +40,9 @@ public class UserController {
     }
     @RequestMapping("/reg")
     public boolean regUser(String name,String password){
-        System.out.println("weixin username:"+name+"password:"+password);
-        return  userService.regUser(name,password);
+       // System.out.println("weixin username:"+name+"password:"+password);
+        System.out.println(userService.regUser(name,password));
+        return  false;
 
     }
 }

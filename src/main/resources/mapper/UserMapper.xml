@@ -10,7 +10,7 @@
         SELECT * FROM user WHERE userName = #{userName}
     </select>
     <insert id="addUser">
-        INSERT INTO user(wechatNum,userName) VALUES ('111',#{userName})
+        INSERT INTO user(wechatNum,userName,password) VALUES ('111',#{userName},#{passWord})
     </insert>
 
 
